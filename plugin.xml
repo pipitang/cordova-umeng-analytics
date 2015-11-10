@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-umeng-analytics"
+    version="0.0.1">
+
+    <name>Corodva Umeng Analytics Plugin</name>
+    <description>A cordova plugin, a JS version for Umeng Analytics SDK</description>
+    <license>MIT</license>
+    <keywords>cordova,umeng</keywords>
+    <repo>https://github.com/pipitang/cordova-umeng-analytics.git</repo>
+    <issue>https://github.com/pipitang/cordova-umeng-analytics/issues</issue>
+    
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+    
+    <!-- js module-->
+    <js-module src="www/umeng.analytics.js" name="Analytics">
+        <clobbers target="Umeng" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="analytics">
+                <param name="ios-package" value="CDVAnalytics"/>
+                <param name="onload" value="true" />
+            </feature>
+            <feature name="update">
+                <param name="ios-package" value="CDVUpdate"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+            </dict>
+        </config-file>
+        
+        <header-file src="src/ios/CDVAnalytics.h" />
+        <source-file src="src/ios/CDVAnalytics.m" />
+
+        <header-file src="src/ios/libs/UMAnalytics_Sdk_3.6.4/MobClick.h" />
+        <header-file src="src/ios/libs/UMAnalytics_Sdk_3.6.4/MobClickSocialAnalytics.h" />
+        <source-file src="src/ios/libs/UMAnalytics_Sdk_3.6.4/libMobClickLibrary.a" framework="true" />
+        
+        <framework src="libz.dylib" />
+    </platform>
+
+    <platform name="android">
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="analytics">
+                <param name="android-package" value="org.apache.cordova.umeng.Analytics"/>
+            </feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+        
+        <source-file src="src/android/Analytics.java" target-dir="src/org/apache/cordova/umeng" />
+        <source-file src="src/android/libs/umeng-analytics-v5.6.1.jar" target-dir="libs" />
+    </platform>
+</plugin>
