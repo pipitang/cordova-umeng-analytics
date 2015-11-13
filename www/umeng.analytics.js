@@ -16,7 +16,7 @@ module.exports = {
 
         setDebug: function(enable, onSuccess, onError) {
         	exec(onSuccess, onError, "Analytics", "setDebug", [enable]);	
-        }.
+        },
 
         logEvent: function (parameters, onSuccess, onError) {
             exec(onSuccess, onError, "Analytics", "logEvent", [parameters]);
