@@ -4,9 +4,9 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-umeng-analytics"
-    version="0.0.1">
+    version="0.0.3">
 
-    <name>Corodva Umeng Analytics Plugin</name>
+    <name>Umeng Analytics Plugin</name>
     <description>A cordova plugin, a JS version for Umeng Analytics SDK</description>
     <license>MIT</license>
     <keywords>cordova,umeng</keywords>
@@ -25,12 +25,8 @@
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="analytics">
+            <feature name="Analytics">
                 <param name="ios-package" value="CDVAnalytics"/>
-                <param name="onload" value="true" />
-            </feature>
-            <feature name="update">
-                <param name="ios-package" value="CDVUpdate"/>
                 <param name="onload" value="true" />
             </feature>
         </config-file>
@@ -55,8 +51,9 @@
     <platform name="android">
         
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="analytics">
+            <feature name="Analytics">
                 <param name="android-package" value="org.apache.cordova.umeng.Analytics"/>
+                <param name="onload" value="true" />
             </feature>
         </config-file>
         
