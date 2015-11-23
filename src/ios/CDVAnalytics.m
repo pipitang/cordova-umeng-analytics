@@ -45,10 +45,10 @@
 
 - (void)logEvent:(CDVInvokedUrlCommand *)command
 {
-    NSDictionary params = [command.arguments objectAtIndex 0];
+    NSDictionary *params = [command.arguments objectAtIndex:0];
     NSString* eventId = [params objectForKey:@"eventId"];
     NSDictionary* attributes = [params objectForKey:@"attributes"];
-    NSInteger* number = [params objectForKey:@"num"];
+    int number = (int)[params objectForKey:@"num"];
     [MobClick event: eventId attributes: attributes counter: number];
     [self successWithCallbackID:command.callbackId];
 }

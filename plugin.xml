@@ -4,7 +4,7 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-umeng-analytics"
-    version="0.0.4">
+    version="0.0.5">
 
     <name>Umeng Analytics Plugin</name>
     <description>A cordova plugin, a JS version for Umeng Analytics SDK</description>
