@@ -13,8 +13,8 @@
         [self failWithCallbackID:command.callbackId withMessage:@"参数格式错误"];
         return ;
     }
-    NSString* appkey = [[params objectForKey:@"appkey"] stringValue];
-    NSString* channel = [[params objectForKey:@"channel"] stringValue];
+    NSString* appkey = [params objectForKey:@"appkey"];
+    NSString* channel = [params objectForKey:@"channel"];
     //TODO: validate the above parameters
     [MobClick startWithAppkey:appkey reportPolicy:BATCH channelId:channel];
     [self successWithCallbackID:command.callbackId];
