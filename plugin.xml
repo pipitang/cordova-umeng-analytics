@@ -4,7 +4,7 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-umeng-analytics"
-    version="0.0.5">
+    version="0.0.5.1">
 
     <name>Umeng Analytics Plugin</name>
     <description>A cordova plugin, a JS version for Umeng Analytics SDK</description>
@@ -41,11 +41,14 @@
         <header-file src="src/ios/CDVAnalytics.h" />
         <source-file src="src/ios/CDVAnalytics.m" />
 
-        <header-file src="src/ios/libs/UMAnalytics_Sdk_3.6.4/MobClick.h" />
-        <header-file src="src/ios/libs/UMAnalytics_Sdk_3.6.4/MobClickSocialAnalytics.h" />
-        <source-file src="src/ios/libs/UMAnalytics_Sdk_3.6.4/libMobClickLibrary.a" framework="true" />
+        <framework src="src/ios/UMMobClick.framework" custom="true" />
         
+        <framework src="CoreTelephony.framework" />
+        <framework src="Security.framework" />
+        <framework src="libsqlite3.0.tbd" />
+        <framework src="libz.tbd" />
         <framework src="libz.dylib" />
+        
     </platform>
 
     <platform name="android">

@@ -1,8 +1,9 @@
 #import "CDVAnalytics.h"
-#import "MobClick.h"
-#import "MobClickSocialAnalytics.h"
-
+#import <UMMobClick/MobClick.h>
+#import <UMMobClick/MobClickSocialAnalytics.h>
+              
 @implementation CDVAnalytics
+
 
 #pragma API
 - (void)config:(CDVInvokedUrlCommand *)command
@@ -13,10 +14,11 @@
         [self failWithCallbackID:command.callbackId withMessage:@"参数格式错误"];
         return ;
     }
-    NSString* appkey = [params objectForKey:@"appkey"];
-    NSString* channel = [params objectForKey:@"channel"];
-    //TODO: validate the above parameters
-    [MobClick startWithAppkey:appkey reportPolicy:BATCH channelId:channel];
+
+    UMConfigInstance.appKey = [params objectForKey:@"appkey"];
+    UMConfigInstance.channelId =  @"App Store";
+    [MobClick startWithConfigure:UMConfigInstance];
+
     [self successWithCallbackID:command.callbackId];
 }
 
