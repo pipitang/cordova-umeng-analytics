@@ -4,7 +4,7 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-umeng-analytics"
-    version="0.0.5.1">
+    version="0.0.5.2">
 
     <name>Umeng Analytics Plugin</name>
     <description>A cordova plugin, a JS version for Umeng Analytics SDK</description>
@@ -29,13 +29,6 @@
                 <param name="ios-package" value="CDVAnalytics"/>
                 <param name="onload" value="true" />
             </feature>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
-            <dict>
-                <key>NSAllowsArbitraryLoads</key>
-                <true/>
-            </dict>
         </config-file>
         
         <header-file src="src/ios/CDVAnalytics.h" />

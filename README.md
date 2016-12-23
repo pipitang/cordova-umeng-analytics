@@ -2,6 +2,10 @@
 
 Cordova友盟统计插件
 
+# 更新历史
+
+* 当前iOS版本已经同步到「友盟官方 iOS 统计分析SDK v4.1.8（2016-12-12）」
+
 # 功能
 
 目前只有基本的统计分析功能，具体功能参见官方文档。 自动更新功能，请参见[友盟更新插件](http://github.com/pipitang/cordova-umeng-update)
