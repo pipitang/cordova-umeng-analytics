@@ -89,12 +89,6 @@ typedef NS_ENUM (NSUInteger, eScenarioType)
  */
 + (void)setLogEnabled:(BOOL)value;
 
-/** 设置是否开启background模式, 默认YES.
- @param value 为YES,SDK会确保在app进入后台的短暂时间保存日志信息的完整性，对于已支持background模式和一般app不会有影响.
-        如果该模式影响某些App在切换到后台的功能，也可将该值设置为NO.
- @return void.
- */
-+ (void)setBackgroundTaskEnabled:(BOOL)value;
 
 /** 设置是否对日志信息进行加密, 默认NO(不加密).
  @param value 设置为YES, umeng SDK 会将日志信息做加密处理
