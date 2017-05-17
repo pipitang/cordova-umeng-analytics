@@ -89,7 +89,6 @@ typedef NS_ENUM (NSUInteger, eScenarioType)
  */
 + (void)setLogEnabled:(BOOL)value;
 
-
 /** 设置是否对日志信息进行加密, 默认NO(不加密).
  @param value 设置为YES, umeng SDK 会将日志信息做加密处理
  @return void.
