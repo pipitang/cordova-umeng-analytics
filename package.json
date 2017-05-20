@@ -1,0 +1,29 @@
+{
+  "name": "cordova-umeng-analytics",
+  "version": "0.0.6",
+  "cordova_name": "Umeng Analytics Plugin",
+  "description": "A cordova plugin, a JS version for Umeng Analytics SDK",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipitang/cordova-umeng-analytics.git"
+  },
+  "keywords": [
+    "cordova",
+    "phonegap",
+    "umeng"
+  ],
+  "engines": [],
+  "cordova": {
+    "id": "org.apache.cordova.umeng.Analytics",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "author": "pipitang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pipitang/cordova-umeng-analytics/issues"
+  },
+  "homepage": "https://github.com/pipitang/cordova-umeng-analytics#readme"
+}
