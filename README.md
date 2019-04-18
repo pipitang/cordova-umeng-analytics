@@ -1,3 +1,8 @@
+# WARNING
+
+本仓库已经于2016年底不在维护，请移步 https://github.com/shineabel/cordova-umeng-analytics
+
+
 # cordova-umeng-analytics
 
 Cordova友盟统计插件
